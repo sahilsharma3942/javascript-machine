@@ -1,0 +1,15 @@
+.sliderImg{
+    height: 400px;
+    width: 400px;
+}
+.container{
+    display: flex;
+    height: 400px;
+    width: 2000px;
+}
+.slider{
+    height: 800px;
+    width: 400px;
+    overflow: hidden;
+    margin: auto;
+}

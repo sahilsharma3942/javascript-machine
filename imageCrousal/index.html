@@ -5,24 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .sliderImg{
-            height: 400px;
-            width: 400px;
-        }
-        .container{
-            display: flex;
-            height: 400px;
-            width: 2000px;
-        }
-        .slider{
-            height: 800px;
-            width: 400px;
-            overflow: hidden;
-            margin: auto;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 
 <body>
@@ -50,54 +34,7 @@
         </div>
     </div>
 
-    <script>
-
-        let index =0;
-        const prevBtn = document.querySelector(".prevBtn");
-        const nextBtn = document.querySelector(".nextBtn");
-        const container =  document.querySelector(".container");
-        const infiniteScroll = document.querySelector("#infiniteScroll");
-        const dots = document.querySelectorAll(".dots input");
-        
-        function updateSlider(){
-            container.style.transform = `translateX(${-index*400}px)`;
-            dots.forEach((dot,i)=>{
-                if(i===index){
-                    dot.disabled=false;
-                    dot.checked=true;
-                }else{
-                    dot.checked=false;
-                    dot.disabled=true;
-                }
-            })
-
-        }
-        prevBtn.addEventListener("click",function(){
-            
-            index--;
-            if(index<0){
-                if(infiniteScroll.checked){
-                    index=4;
-                }else{
-                    index=0;
-                }
-            };
-            updateSlider();
-        });
-        nextBtn.addEventListener("click",function(){
-            index++;
-            if(index>4){
-                if(infiniteScroll.checked){
-                    index=0;
-                }else{
-                    index=4;
-                }
-            };
-            updateSlider();
-        });
-
-        updateSlider();
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
