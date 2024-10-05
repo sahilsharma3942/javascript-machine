@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.box.active{
+    background-color: green;
+}
